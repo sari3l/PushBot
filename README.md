@@ -30,22 +30,22 @@
 
 ## 部署
 
-    1. docker
-    
-        ```shell
-        docker-compose up -d
-        ```
-   
-   2. python
-   
-        ```bash
-        python botmain.py
-        ```
-      
-   3. 其他...
+1. docker
+
+    ```shell
+    docker-compose up -d
+    ```
+
+2. python
+
+    ```bash
+    python botmain.py
+    ```
+  
+3. 其他...
    
 ## 使用
 
-    1. 输入`/start`或`/help`后等待结果返回
-    2. 创建、绑定凭证
-    3. 通过接口进行消息推送
+1. 输入`/start`或`/help`后等待结果返回
+2. 创建、绑定凭证
+3. 通过接口进行消息推送
