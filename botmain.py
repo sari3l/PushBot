@@ -175,22 +175,22 @@ def webhook():
 
 @webapp.route('/sendMessage/', methods=['GET'])
 def echo_message():
-    id = flask.request.args.get('id')
+    sid = flask.request.args.get('id')
     text = flask.request.args.get('text')
     return send_message(dict(
-        token=id,
+        sid=sid,
         text=text
     ))
 
 
 def send_message(data):
     userList = tdb.find_ship_user(dict(
-        sid=data['id']
+        sid=data['sid']
     ))
     result_text = {}
-    for i, id in enumerate([x['uid'] for x in userList]):
+    for i, cid in enumerate([x['uid'] for x in userList]):
         status = bot.send_message(
-            chat_id=id,
+            chat_id=cid,
             text=data['text']
         )
         result_text[i] = status.json
