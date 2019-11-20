@@ -12,7 +12,7 @@
     IN_DOCKER = <True/False>        # 是否使用 docker 部署，docker 受单线程影响
     API_TOKEN = "<api_token>"       # BotFather 处申请的 token
     WEBHOOK_HOST = "<host or ip>"   # 部署 host 或 ip 均可
-    WEBHOOK_PORT = "8443"           # 默认Web 监听端口，若修改请同时修改 docker-compose 中端口映射
+    WEBHOOK_PORT = "8443"           # 默认 Web 监听端口，若修改请同时修改 docker-compose 中端口映射
     
     # 替换证书
     # openssl genrsa -out cacert.pem 2048
@@ -49,3 +49,9 @@
 1. 输入`/start`或`/help`后等待结果返回
 2. 创建、绑定凭证
 3. 通过接口进行消息推送
+
+## 注意事项
+
+1. 需部署在能访问`https://api.telegram.org/`的服务器上
+2. 凭证创始人无法将绑定同凭证的他人移除，所以需妥善保管 ID 和 SECRET
+3. 暂时只支持简单消息推送
