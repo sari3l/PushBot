@@ -50,6 +50,10 @@
 2. 创建、绑定凭证
 3. 通过接口进行消息推送
 
+## 效果
+
+![](https://cdn.sari3l.com/telebot_push.png)
+
 ## 注意事项
 
 1. 需部署在能访问`https://api.telegram.org/`的服务器上
