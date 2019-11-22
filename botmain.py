@@ -32,7 +32,7 @@ def send_welcome(message):
     text = "1. 创建凭据：生成随机id和secret，创建者默认绑定\n" \
            "2. 删除凭据：只有创建者才可执行删除\n" \
            "3. 绑定凭证：绑定后即可获取消息推送\n" \
-           "4. 解除绑定：解除相关绑定信息，接触后无法继续获取相关推送\n" \
+           "4. 解除绑定：解除相关绑定信息，解除后无法继续获取相关推送\n" \
            "5. 查询绑定状态：查询当前获取绑定数量及相关ID\n\n" \
            "推送接口：https://{host}:{port}/sendMessage/?id=:id&text=:text".format(
         host=WEBHOOK_HOST,
@@ -205,4 +205,4 @@ bot.set_webhook(url=WEBHOOK_URL_BASE + WEBHOOK_URL_PATH,
 webapp.run(host=WEBHOOK_LISTEN,
            port=WEBHOOK_PORT,
            ssl_context=(WEBHOOK_SSL_CERT, WEBHOOK_SSL_PRIV),
-           debug=True)
+           debug=False)
